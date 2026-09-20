@@ -24,3 +24,66 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  /* Brand */
+  --color-primary: #C83F79;
+  --color-primary-dark: #67213E;
+  --color-primary-mauve: #AE508B;
+  --color-primary-bright: #EC4684;
+  --color-primary-soft: #F8E9F0;
+
+  /* Terracotta */
+  --color-terracotta: #BC7D6F;
+  --color-terracotta-light: #F4ECE9;
+  --color-terracotta-dark: #93584B;
+
+  /* Coastal */
+  --color-coastal-sky: #5AAFDF;
+  --color-coastal-pacific: #2D91D4;
+  --color-coastal-jacaranda: #7D63A2;
+
+  /* Surfaces */
+  --color-surface-arena: #FFF9F5;
+  --color-surface-white: #FFFFFF;
+  --color-surface-charcoal: #2B2025;
+  --color-surface-driftwood: #6F6267;
+  --color-surface-border: #E8DDE0;
+
+  /* Typography */
+  --font-serif: "Noto Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  /* Shadows */
+  --shadow-warm-sm:
+    0 2px 8px -2px rgb(103 33 62 / 5%),
+    0 1px 4px -1px rgb(188 125 111 / 8%);
+
+  --shadow-warm-md:
+    0 12px 24px -6px rgb(103 33 62 / 7%),
+    0 4px 12px -2px rgb(188 125 111 / 6%);
+
+  --shadow-warm-lg:
+    0 20px 40px -12px rgb(43 32 37 / 8%);
+}
+
+:root {
+  --background: #FFF9F5;
+  --foreground: #2B2025;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-surface-arena);
+}

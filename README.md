@@ -1,36 +1,282 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Casa Pitaya
+
+Website for **Casa Pitaya**, a vacation residence in Puerto Vallarta, Jalisco, Mexico.
+
+The project is being developed as a modern, responsive web experience focused on presenting the property, its spaces, amenities, location, house rules, and contact/booking options.
+
+> **Development status:** In progress
+
+---
+
+## About Casa Pitaya
+
+Casa Pitaya is a complete vacation residence located in Puerto Vallarta.
+
+Current documented property information includes:
+
+- More than 16 guests
+- 6 bedrooms
+- 8 beds
+- 4 bathrooms
+- Private pool
+- Equipped kitchen
+- Outdoor areas
+- Wi-Fi
+- Pet-friendly accommodation
+- Location in Las Gaviotas, Puerto Vallarta
+
+For the complete and authoritative property information, see:
+
+`docs/client.md`
+
+---
+
+## Tech Stack
+
+- **Next.js**
+- **TypeScript**
+- **React**
+- **Tailwind CSS 4.x**
+
+The architecture is intentionally kept simple for the initial marketing website while allowing future evolution toward features such as contact forms, email notifications, availability inquiries, and reservation-related functionality.
+
+---
+
+## Project Structure
+
+```text
+.
+├── AGENTS.md
+│
+├── docs/
+│   ├── client.md
+│   ├── brand.md
+│   ├── content.md
+│   ├── seo.md
+│   ├── assets.md
+│   ├── requirements.md
+│   ├── technical.md
+│   └── decisions.md
+│
+├── public/
+│   ├── images/
+│   │   ├── mocks/
+│   │   ├── generated/
+│   │   └── client/
+│   └── fonts/
+│
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── config/
+│   ├── lib/
+│   └── types/
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## Documentation
+
+Project knowledge is intentionally separated from agent instructions.
+
+| Document               | Purpose                                        |
+| ---------------------- | ---------------------------------------------- |
+| `AGENTS.md`            | Instructions for AI coding agents              |
+| `docs/client.md`       | Authoritative property information             |
+| `docs/brand.md`        | Brand identity and visual direction            |
+| `docs/content.md`      | Content strategy and website messaging         |
+| `docs/seo.md`          | SEO strategy and metadata                      |
+| `docs/assets.md`       | Asset strategy and mock/production assets      |
+| `docs/requirements.md` | High-level functional scope                    |
+| `docs/technical.md`    | Technical architecture                         |
+| `docs/decisions.md`    | Important project decisions                    |
+| `docs/specs/`          | Feature specifications and acceptance criteria |
+
+### Source of truth
+
+Different documents have different responsibilities.
+
+- Property facts → `docs/client.md`
+- Visual identity → `docs/brand.md`
+- Content → `docs/content.md`
+- SEO → `docs/seo.md`
+- Functional behavior → `docs/specs/`
+- Architecture → `docs/technical.md`
+- Architectural decisions → `docs/decisions.md`
+
+Do not treat this README as the source of truth for detailed project information.
+
+---
+
+## Development Approach
+
+The project follows **Spec-Driven Development (SDD)**.
+
+New functionality should generally follow:
+
+```text
+Idea
+  ↓
+Specification
+  ↓
+Implementation
+  ↓
+Validation
+  ↓
+Documentation / Decision
+```
+
+Feature specifications are stored under:
+
+```text
+docs/specs/
+```
+
+A specification defines the expected behavior and acceptance criteria for its feature.
+
+---
+
+## Assets
+
+Official property photography has not yet been provided by the client.
+
+For this reason, the initial development uses mock assets.
+
+Mock assets are stored under:
+
+```text
+public/images/mocks/
+```
+
+They are temporary development assets and **must not be presented as official Casa Pitaya photography**.
+
+Official client-provided assets will be stored under:
+
+```text
+public/images/client/
+```
+
+See `docs/assets.md` for the complete asset strategy.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Requirements
+
+Install:
+
+- Node.js LTS
+- npm, pnpm, yarn, or another supported package manager
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for production
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Start the production server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Environment variables should be stored in a local environment file:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+.env.local
+```
+
+Do not commit secrets or private credentials to the repository.
+
+At the current stage, environment variables should only be introduced when required by an implemented feature.
+
+---
+
+## Development Principles
+
+- Do not invent property information.
+- Do not present mock imagery as authentic property photography.
+- Follow the approved project specifications.
+- Prefer Server Components unless client-side interactivity is required.
+- Keep components focused and reusable.
+- Use TypeScript throughout the application.
+- Preserve accessibility and responsive behavior.
+- Avoid unnecessary dependencies and abstractions.
+- Do not implement speculative future functionality.
+- Update the relevant documentation when important project decisions change.
+
+---
+
+## AI-Assisted Development
+
+This project is developed with AI-assisted coding tools.
+
+AI agents should read `AGENTS.md` before modifying the project.
+
+Agents should consult the relevant documentation under `docs/` before making decisions about:
+
+- Property information
+- Content
+- Branding
+- Assets
+- SEO
+- Requirements
+- Architecture
+
+When implementing a feature, the relevant specification under `docs/specs/` should be treated as the authoritative behavioral reference.
+
+---
+
+## Project Status
+
+### Current
+
+- [x] Project architecture defined
+- [x] Client/property information documented
+- [x] Brand direction documented
+- [x] Content strategy documented
+- [x] SEO strategy documented
+- [x] Asset strategy documented
+- [x] Technical architecture documented
+- [x] Spec-Driven Development adopted
+- [ ] Feature specifications
+- [ ] Initial page implementation
+- [ ] Responsive validation
+- [ ] Accessibility validation
+- [ ] SEO implementation
+- [ ] Production assets
+- [ ] Production deployment
+
+---
+
+## License
+
+This project is developed for Casa Pitaya.
+
+Unless otherwise specified, project code and assets should not be assumed to be available for redistribution or commercial reuse.
