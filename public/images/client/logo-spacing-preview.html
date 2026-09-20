@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casa Pitaya — Logo Spacing Preview</title>
+<style>
+@font-face{
+  font-family:Satoshi;
+  src:url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+:root{font-family:Satoshi,Arial,sans-serif;color:#2B2025;background:#FFF9F5}
+body{margin:0;padding:40px}
+h1{font-size:28px;margin:0 0 8px}
+p{color:#6F6267;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px}
+.card{background:#fff;border:1px solid #E8DDE0;border-radius:16px;padding:28px}
+.card h2{font-size:14px;margin:0 0 18px;letter-spacing:.08em;text-transform:uppercase;color:#C83F79}
+.stage{background:#F7EFEA;border-radius:12px;min-height:180px;display:flex;align-items:center;justify-content:center;padding:20px}
+img{max-width:100%;height:auto}
+.note{font-size:13px;line-height:1.5;margin-top:16px}
+code{background:#f1e8e5;padding:2px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>Casa Pitaya — Logo spacing</h1>
+<p>Preview using the project's Satoshi Variable font. The SVGs use tighter optical tracking than Stitch's original CSS.</p>
+<div class="grid">
+  <section class="card"><h2>Primary Horizontal</h2><div class="stage"><img src="./logo-primary-horizontal.svg"></div><div class="note">Wordmark <code>0.04em</code> · subline <code>0.14em</code></div></section>
+  <section class="card"><h2>Stacked / Vertical</h2><div class="stage"><img src="./logo-stacked.svg"></div><div class="note">Wordmark <code>0.04em</code> · subline <code>0.14em</code></div></section>
+  <section class="card"><h2>Original Stitch spacing</h2><div class="stage" style="flex-direction:column;gap:8px">
+    <div style="font-size:25px;font-weight:700;letter-spacing:.08em">CASA PITAYA</div>
+    <div style="font-size:9px;font-weight:600;letter-spacing:.24em;color:#BC7D6F">PUERTO VALLARTA · MÉXICO</div>
+  </div><div class="note">This is the spacing specified by Stitch: <code>0.08em</code> / <code>0.24em</code>.</div></section>
+  <section class="card"><h2>Adjusted for Satoshi</h2><div class="stage" style="flex-direction:column;gap:8px">
+    <div style="font-size:25px;font-weight:700;letter-spacing:.04em">CASA PITAYA</div>
+    <div style="font-size:9px;font-weight:600;letter-spacing:.14em;color:#BC7D6F">PUERTO VALLARTA · MÉXICO</div>
+  </div><div class="note">Recommended starting point for the project's Satoshi font. Final optical tuning can be done once viewed at actual website sizes.</div></section>
+</div>
+</body>
+</html>
