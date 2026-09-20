@@ -1,0 +1,14 @@
+<svg viewBox="0 0 260 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Casa Pitaya — Stacked</title>
+  <desc id="desc">Casa Pitaya stacked wordmark with Puerto Vallarta México subline.</desc>
+  <g transform="translate(108 8)">
+    <path d="M22 5V0M34 9L38 6M38 21H43M34 32L38 35M10 9L6 6M6 21H1M10 32L6 35" stroke="#BC7D6F" stroke-linecap="round" stroke-width="2.5"/>
+    <path d="M22 2C13 2 6 9 6 18C6 29 22 42 22 42C22 42 38 29 38 18C38 9 31 2 22 2Z" fill="#C83F79"/>
+    <path d="M22 8C16 8 11 13 11 19C11 27 22 36 22 36C22 36 33 27 33 19C33 13 28 8 22 8Z" fill="#67213E"/>
+    <circle cx="22" cy="18" fill="#FFF9F5" r="4.5"/>
+  </g>
+  <g fill="#2B2025" font-family="Satoshi, Arial, sans-serif" text-anchor="middle">
+    <text x="130" y="82" font-size="22" font-weight="700" letter-spacing="0.04em">CASA PITAYA</text>
+    <text x="130" y="99" font-size="8.5" font-weight="600" letter-spacing="0.14em" fill="#BC7D6F">PUERTO VALLARTA · MÉXICO</text>
+  </g>
+</svg>
